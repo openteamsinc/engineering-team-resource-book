@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+# TODO: make the subsection appear as such, correctly path it into intro page
+
+format: jb-book
+root: docs/intro
+chapters:
+- file: docs/otscore_intro
+  sections: 
+  -file: docs/otscore_components
+
