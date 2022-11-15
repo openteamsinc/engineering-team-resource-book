@@ -1,4 +1,4 @@
-# This is the Engineering Team Resource Book
+# Engineering Team Resource Book
 
 This book contains a collection of centralized HOWTOs, resources, cheatsheets. This is a resource for the team's technical knowledge base.
 
