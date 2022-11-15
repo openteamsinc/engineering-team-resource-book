@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Components of the OpenTeams Score &#8212; Engineering Team Resource Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="OpenTeams Score" href="otscore_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/openteams_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Team Resource Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    This is the Engineering Team Resource Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="otscore_intro.html">
+   OpenTeams Score
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Components of the OpenTeams Score
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/otscore_components.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/docs/otscore_components.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#security-risks">
+   1. Security Risks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#known-as-common-vulnerabilities-and-exposures-cves">
+     Known as Common Vulnerabilities and Exposures (CVEs)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-sources">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ip-risk">
+   2. IP risk
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-someone-claim-my-derivative-work-is-all-the-code-really-licensed-for-me-to-use">
+     Will someone claim my derivative work, is all the code really licensed for me to use.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#governance">
+   3. Governance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-the-project-well-governed">
+     Is the project well-governed?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#popularity">
+   4. Popularity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage-number-of-users-dependent-projects-domain-area">
+     Usage, number of users, dependent projects, domain area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#community-health">
+   5. Community Health
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributors-around-the-project">
+     Contributors around the project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-risk">
+   6. Version risk
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-supported-is-the-version-you-are-using">
+     How supported is the version you are using
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#immediate-action-items">
+   Immediate Action Items:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliverables">
+   Deliverables
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Components of the OpenTeams Score</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#security-risks">
+   1. Security Risks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#known-as-common-vulnerabilities-and-exposures-cves">
+     Known as Common Vulnerabilities and Exposures (CVEs)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-sources">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ip-risk">
+   2. IP risk
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#will-someone-claim-my-derivative-work-is-all-the-code-really-licensed-for-me-to-use">
+     Will someone claim my derivative work, is all the code really licensed for me to use.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#governance">
+   3. Governance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-the-project-well-governed">
+     Is the project well-governed?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#popularity">
+   4. Popularity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage-number-of-users-dependent-projects-domain-area">
+     Usage, number of users, dependent projects, domain area
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#community-health">
+   5. Community Health
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributors-around-the-project">
+     Contributors around the project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-risk">
+   6. Version risk
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-supported-is-the-version-you-are-using">
+     How supported is the version you are using
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Data Sources:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#immediate-action-items">
+   Immediate Action Items:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliverables">
+   Deliverables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="components-of-the-openteams-score">
+<h1>Components of the OpenTeams Score<a class="headerlink" href="#components-of-the-openteams-score" title="Permalink to this headline">#</a></h1>
+<section id="security-risks">
+<h2>1. Security Risks<a class="headerlink" href="#security-risks" title="Permalink to this headline">#</a></h2>
+<section id="known-as-common-vulnerabilities-and-exposures-cves">
+<h3>Known as Common Vulnerabilities and Exposures (CVEs)<a class="headerlink" href="#known-as-common-vulnerabilities-and-exposures-cves" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="data-sources">
+<h3>Data Sources:<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Scan the project with <a class="reference external" href="https://awesomeopensource.com/projects/cve">one of the open-source security (CVE) tools</a></p></li>
+<li><p>Check to see if there is a bug report on the project on <a class="reference external" href="https://bugzilla.redhat.com/">Bugzilla</a></p></li>
+<li><p><a class="reference external" href="https://www.whitesourcesoftware.com/vulnerability-database/projects">WhiteSource Vulnerability DataBase</a> (this is a paid service)</p></li>
+<li><p>Also, check out <a class="reference external" href="https://www.whitesourcesoftware.com/free-developer-tools/">WhiteSource Free Developer Tools</a></p></li>
+<li><p>…</p></li>
+</ul>
+</section>
+</section>
+<section id="ip-risk">
+<h2>2. IP risk<a class="headerlink" href="#ip-risk" title="Permalink to this headline">#</a></h2>
+<section id="will-someone-claim-my-derivative-work-is-all-the-code-really-licensed-for-me-to-use">
+<h3>Will someone claim my derivative work, is all the code really licensed for me to use.<a class="headerlink" href="#will-someone-claim-my-derivative-work-is-all-the-code-really-licensed-for-me-to-use" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>There are over 200 types of licenses that can be applied to open-source software, including Apache, GPL, and MIT. Many of these licenses are incompatible with each other, meaning that certain components cannot be used together since you have to comply with all terms when using open-source software. The more components you use, the more difficult it becomes to track and compare all of the license stipulations. Companies want to ensure that they are remaining compliant with open source licenses and protecting themselves from business or reputational risk. The most common IP risks that arise from the use of open source software today, include Copyright infringement, Patent infringement, Reputational risk, Exposure of IP secrets, The impact on the partner/customer relationship, the concept of viral or copyleft licenses. Being aware that no license means default copyright laws apply.
+Low risk: Permissive licenses:</p></li>
+<li><p>Permissive licenses generally do not have real limiting conditions. Rather, they usually require that you keep the copyright notice in place when you distribute your own software. This basically means that you can use and change the open source software as needed as long as you keep the copyright notices intact. Some top open source licenses in this category are the Apache and MIT licenses. We rate permissive licenses as LOW risk licenses.
+Medium risk: Semi-permissive licenses:</p></li>
+<li><p>Semi-permissive licenses usually require that if you modify the open source code, you make these modifications available under the terms of the given license. Some of these licenses explicitly define what a modification is. For instance, they might consider copying unmodified open source code into proprietary code to be a modification. To comply with the license obligations, the developer would have to release the source code (original, modified, and newly added). The most popular open source licenses in this category include the Mozilla and the Eclipse Public Licenses. We rate semi-permissive licenses as MEDIUM risk licenses.
+High risk: Restrictive licenses:</p></li>
+<li><p>Some top open source licenses, such as GPL 3.0 and AGPL, are quite restrictive. Depending on how you integrate the open source software with your proprietary software, you may face significant risk. In the worst-case scenario, you may be required to release your proprietary software under the same license—royalty-free. We rate restrictive licenses as HIGH risk licenses. <a class="reference external" href="https://www.synopsys.com/blogs/software-security/top-open-source-licenses/">source: Synopsys</a></p></li>
+</ul>
+<p><strong>Copyleft and permissive licenses: what’s the difference?</strong></p>
+<p>Both copyleft and permissive licenses allow developers to copy, modify, and redistribute code (derivative or otherwise) freely. The most important difference between the two, however, lies in how each approaches copyright privileges.
+While permissive licenses allow developers to include their own copyright statements, copyleft licenses provide no such privilege. Instead, copyleft license rules require all derivative works to be subject to the original license. This means that developers cannot make patent or copyright claims on the original software.
+According to research by White Source, the most popular permissive licenses are MIT and Apache 2.0, with BSD in a distant third place. The GNU GPLv3 is the most popular copyleft license but is steadily losing market share compared to permissive licenses. <a class="reference external" href="https://www.kiuwan.com/comparison-popular-open-source-licenses/">Source: Comparison of Pupolar Open Source Licenses</a></p>
+<p><strong>Recent Trends in Open Source Software Licenses</strong></p>
+<p>In 2020, the use of copyleft licenses continued to decrease while permissive licenses increased in their popularity.
+‘’’{image} ../images/whiteSourse_liscense_trend_chart_2020.png
+‘’’
+<a class="reference external" href="https://www.whitesourcesoftware.com/resources/blog/open-source-licenses-trends-and-predictions/">Image credit: WhiteSource</a></p>
+</section>
+<section id="id1">
+<h3>Data Sources:<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fossa.com/product/open-source-license-compliance">FOSSA</a> License Compliance  (paid service)</p></li>
+<li><p>A categorization of existing licenses from the most permissive to the least permissive</p></li>
+</ul>
+</section>
+</section>
+<section id="governance">
+<h2>3. Governance<a class="headerlink" href="#governance" title="Permalink to this headline">#</a></h2>
+<section id="is-the-project-well-governed">
+<h3>Is the project well-governed?<a class="headerlink" href="#is-the-project-well-governed" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id2">
+<h3>Data Sources:<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Github/Gitlab project repo - Does the project have a governance document (bylaws, IP policy, membership policies, board composition, etc.) OR</p></li>
+<li><p>An expression of responsibilities, privileges of contributors exists in the repo</p></li>
+<li><p>Formalized leadership roles definition in the repo (README or elsewhere)
+Meritocracy</p></li>
+<li><p>Check the diversity among company affiliations of the project committers and their contributions over the last 12 months. For example, nine committers out of a total of 11 all coming from the same organization, and having been in place for several years is generally problematic.</p></li>
+<li><p>Is the leadership “earned”?</p></li>
+<li><p>Are the key decisions about the project public?</p></li>
+<li><p>Is the governance (leadership team) broad?</p></li>
+<li><p>Does each contributor have an equal say in the acceptance of a piece of code?</p></li>
+<li><p>Broad governance also means that there are functioning input flows from different teams within a project, such as user and advisory groups. Even if the governance has a BDFL structure, the project can still have broad governance by giving the contributors a chance to have an impact on key decisions</p></li>
+<li><p>Do user groups of the project have a way to provide input into the technical direction of the project</p></li>
+<li><p>Are the leaders governing the input from users &amp; contributors</p></li>
+<li><p>Metrics for good governance: assessment of the governance quality of an open-source project cannot always be abstracted in numbers. Instead, find a list of characteristics – both quantitative and qualitative – that are indicators as to whether a project is more or less well-governed. “a sign of good governance is that there are clear procedures and norms to transfer governance between individuals. This must include an expression of the responsibilities and privileges of individuals contributing to a project or teams of people collaborating on specific areas of subject matter expertise (marketing, integration testing, docs, etc.) within a project.”
+*Patterns in issue resolutions. (Analysis of commentary)</p></li>
+<li><p>Differences of opinion on the technical direction are an innate part of open-source projects. Check for evidence of successful issue resolution as a proof-point for good governance.</p></li>
+</ul>
+</section>
+</section>
+<section id="popularity">
+<h2>4. Popularity<a class="headerlink" href="#popularity" title="Permalink to this headline">#</a></h2>
+<section id="usage-number-of-users-dependent-projects-domain-area">
+<h3>Usage, number of users, dependent projects, domain area<a class="headerlink" href="#usage-number-of-users-dependent-projects-domain-area" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id3">
+<h3>Data Sources:<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Github/Gitlab data (forks count, star count, number of projects dependent on this project, download stats)</p></li>
+<li><p>Web visibility (have social media accounts, forums, frequent discussions on or about the project on forums, StackOverflow data related to questions on the project, etc.)</p></li>
+<li><p>The project repo has main components (contributing guide, code of conduct, readme, documentation, etc.)</p></li>
+</ul>
+</section>
+</section>
+<section id="community-health">
+<h2>5. Community Health<a class="headerlink" href="#community-health" title="Permalink to this headline">#</a></h2>
+<section id="contributors-around-the-project">
+<h3>Contributors around the project<a class="headerlink" href="#contributors-around-the-project" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id4">
+<h3>Data Sources:<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Overview of community, which should require consideration of an open-source component’s history, such as the density of known issues, version release frequency, and latency between issue identification and patch. It is important to know how robust the community involved in a project is and anticipate what sort of support it might or might not provide.</p></li>
+<li><p>Github/Gitlab data (<a class="reference external" href="http://libraries.io">libraries.io</a> SourceRank score?): Is the repository of the project is well maintained, does the project have a documentation page, how good is the documentation?</p></li>
+<li><p>Quality risk of the project: what qualifies a project to be of high quality, there is no standard to assess open source code quality”, popularity does not always guarantee quality.</p></li>
+<li><p>Diversity of contributors – how difficult is it for someone to become a new contributor.  Are there systems in place to attract diverse contributors?  Are there new issues identified?  Are there mentors who can bring in new contributors?</p></li>
+</ul>
+</section>
+</section>
+<section id="version-risk">
+<h2>6. Version risk<a class="headerlink" href="#version-risk" title="Permalink to this headline">#</a></h2>
+<section id="how-supported-is-the-version-you-are-using">
+<h3>How supported is the version you are using<a class="headerlink" href="#how-supported-is-the-version-you-are-using" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id5">
+<h3>Data Sources:<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>For projects that use versioning, what is the most recent version, and what is the oldest version the project team still provides support for?</p></li>
+</ul>
+</section>
+</section>
+<section id="immediate-action-items">
+<h2>Immediate Action Items:<a class="headerlink" href="#immediate-action-items" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Ask for feedback from open source software maintainers, contributors starting with people at OpenTeams and Quansight about the components listed above &amp; make adjustments as needed</p></li>
+<li><p>Review the methods <a class="reference external" href="https://chaoss.community/">CHAOSS</a> and their metrics used to calculate their score and refactor the applicable parts to our score</p></li>
+<li><p>Implement the pipeline/algorithms to gather and calculate a score. This will entail multiple ways of gathering, processing, normalizing, and aggregating the data, such as scraping, using the data sources available, implementing ML/NLP models to process data on the project, and providing predictions, algorithms to calculate the score for each component’s data based on the sources listed above (and potentially more).</p></li>
+</ul>
+</section>
+<section id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>A scoring algorithm to calculate the score for each component and each open source project we are interested in based on the data we collect.</p></li>
+<li><p>A database that stores the score components and final score of each project</p></li>
+<li><p>A tool that can take a conda environment file or a docker manifest and score the environment based on all the dependencies.</p></li>
+<li><p>Make the score available on the project pages</p></li>
+<li><p>When QHub Inc, creates a conda-store environment page – have the environment score listed.</p></li>
+<li><p>Talk to Anaconda about having environments hosted on <a class="reference external" href="http://anaconda.org">anaconda.org</a> have the score.</p></li>
+<li><p>Create an API so that anyone can list the score for the project and/or environment from our algorithm.</p></li>
+<li><p>A feedback mechanism on the project pages for community contributors to understand how the score is calculated and update the data leading to the score. Guide them to how they can do it by identifying other projects, resources, or experts who could help them and pointing them to those resources.</p></li>
+<li><p>Make a command-line tool so that a developer can run the tool over a conda environment, docker container, or other deployment-specific artifacts to get an overall score for the environment.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="otscore_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">OpenTeams Score</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Open Teams Engineering Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
