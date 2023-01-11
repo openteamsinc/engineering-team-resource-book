@@ -20,11 +20,11 @@
 ## 2. IP risk
 ### Will someone claim my derivative work, is all the code really licensed for me to use.
 - There are over 200 types of licenses that can be applied to open-source software, including Apache, GPL, and MIT. Many of these licenses are incompatible with each other, meaning that certain components cannot be used together since you have to comply with all terms when using open-source software. The more components you use, the more difficult it becomes to track and compare all of the license stipulations. Companies want to ensure that they are remaining compliant with open source licenses and protecting themselves from business or reputational risk. The most common IP risks that arise from the use of open source software today, include Copyright infringement, Patent infringement, Reputational risk, Exposure of IP secrets, The impact on the partner/customer relationship, the concept of viral or copyleft licenses. Being aware that no license means default copyright laws apply.
-Low risk: Permissive licenses:
+####Low risk: Permissive licenses:
 - Permissive licenses generally do not have real limiting conditions. Rather, they usually require that you keep the copyright notice in place when you distribute your own software. This basically means that you can use and change the open source software as needed as long as you keep the copyright notices intact. Some top open source licenses in this category are the Apache and MIT licenses. We rate permissive licenses as LOW risk licenses.
-Medium risk: Semi-permissive licenses:
+####Medium risk: Semi-permissive licenses:
 - Semi-permissive licenses usually require that if you modify the open source code, you make these modifications available under the terms of the given license. Some of these licenses explicitly define what a modification is. For instance, they might consider copying unmodified open source code into proprietary code to be a modification. To comply with the license obligations, the developer would have to release the source code (original, modified, and newly added). The most popular open source licenses in this category include the Mozilla and the Eclipse Public Licenses. We rate semi-permissive licenses as MEDIUM risk licenses.
-High risk: Restrictive licenses:
+####High risk: Restrictive licenses:
 - Some top open source licenses, such as GPL 3.0 and AGPL, are quite restrictive. Depending on how you integrate the open source software with your proprietary software, you may face significant risk. In the worst-case scenario, you may be required to release your proprietary software under the same license—royalty-free. We rate restrictive licenses as HIGH risk licenses. [source: Synopsys](https://www.synopsys.com/blogs/software-security/top-open-source-licenses/)
 
 **Copyleft and permissive licenses: what’s the difference?**
@@ -36,8 +36,8 @@ According to research by White Source, the most popular permissive licenses are 
 **Recent Trends in Open Source Software Licenses**
 
 In 2020, the use of copyleft licenses continued to decrease while permissive licenses increased in their popularity.
-'''{image} ../images/whiteSourse_liscense_trend_chart_2020.png
-'''
+```{image} ../images/whiteSourse_liscense_trend_chart_2020.png
+```
 [Image credit: WhiteSource](https://www.whitesourcesoftware.com/resources/blog/open-source-licenses-trends-and-predictions/)
 
 ### Data Sources:
