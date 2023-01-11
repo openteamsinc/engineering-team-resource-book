@@ -36,8 +36,8 @@ According to research by White Source, the most popular permissive licenses are 
 **Recent Trends in Open Source Software Licenses**
 
 In 2020, the use of copyleft licenses continued to decrease while permissive licenses increased in their popularity.
-'''{image} ../images/whiteSourse_liscense_trend_chart_2020.png
-'''
+```{image} ../images/whiteSourse_liscense_trend_chart_2020.png
+```
 [Image credit: WhiteSource](https://www.whitesourcesoftware.com/resources/blog/open-source-licenses-trends-and-predictions/)
 
 ### Data Sources:

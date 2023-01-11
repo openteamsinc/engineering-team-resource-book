@@ -1,4 +1,6 @@
-# Book Guidelines
+# Book Tutorial and Guidelines
+
+This page includes information about how to add a section to this Jupyter Book as well as the standards for doing so.
 
 ## How to add a section:
 
@@ -147,8 +149,8 @@ I’m an admonition!
 #### Typeface
 "**" on either side of text creates bold face font.
 **Bold text.**
-"***" on either side of text creates italic font.
-***Italic font.***
+"*" on either side of text creates italic font.
+*Italic font.*
 
 ## More information:
 For more information visit the Jupyter Book website.
