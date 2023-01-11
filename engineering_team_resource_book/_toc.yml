@@ -15,4 +15,7 @@ chapters:
 - file: docs/otscore_intro
   sections: 
   - file: docs/otscore_components
+- file: docs/gcp_monitoring_intro.md
+  sections: 
+  - file: docs/gcp_monitoring_steps.md
 
