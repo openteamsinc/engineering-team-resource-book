@@ -56,7 +56,7 @@ You can also signal a full re-build using the --all option:
 ### 7.
 ```pip install ghp-import```
 
-### 8.
+### 8. Navigate to engineering_team_resource_book and push changes using ghp-import
 ```ghp-import -n -p -f _build/html```
 This will add the changes you have made to the GitHub Pages for this Jupyter Book which can be found [here.](https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html)
 
