@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Engineering Team Resource Book
-author: Open Teams Engineering Team
+author: OpenTeams Engineering Team
 logo: images/openteams_logo.png
 
 # Force re-execution of notebooks on each build.

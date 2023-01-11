@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Book Tutorial and Guidelines &#8212; Engineering Team Resource Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenTeams Engineering Developer Guidelines" href="developer_guidelines.html" />
+    <link rel="prev" title="Engineering Team Resource Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/openteams_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Team Resource Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Engineering Team Resource Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Book Tutorial and Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="developer_guidelines.html">
+   OpenTeams Engineering Developer Guidelines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="team_culture.html">
+     Team Culture
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="communication_standards.html">
+     Communication Standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="engineering.html">
+     Engineering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="appendix.html">
+     Appendix
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="otscore_intro.html">
+   OpenTeams Score
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="otscore_components.html">
+     Components of the OpenTeams Score
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/instructions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/docs/instructions.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-add-a-section">
+   How to add a section:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-this-repository">
+     1. Clone this repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navigate-to-the-docs-folder">
+     2. Navigate to the docs folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-markdown-file">
+     3. Create a markdown file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-contents">
+     4. Add contents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-the-toc-yml-file-add-markdown-file">
+     5. In the _toc.yml file add markdown file.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-book">
+     6. Build the Book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     7.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import">
+     8. Navigate to engineering_team_resource_book and push changes using ghp-import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-requirements">
+   Formatting Requirements:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-intro-page">
+     Project intro page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#section-pages">
+     Section Pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-references-for-formatting">
+   Some references for formatting:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#section-titles-and-referencing">
+     Section Titles and Referencing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linking">
+     Linking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notes">
+     Notes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code">
+     Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bullet-points">
+     Bullet points
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typeface">
+     Typeface
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More information:
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Book Tutorial and Guidelines</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-add-a-section">
+   How to add a section:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-this-repository">
+     1. Clone this repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navigate-to-the-docs-folder">
+     2. Navigate to the docs folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-markdown-file">
+     3. Create a markdown file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-contents">
+     4. Add contents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-the-toc-yml-file-add-markdown-file">
+     5. In the _toc.yml file add markdown file.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-the-book">
+     6. Build the Book
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     7.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import">
+     8. Navigate to engineering_team_resource_book and push changes using ghp-import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatting-requirements">
+   Formatting Requirements:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-intro-page">
+     Project intro page
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#section-pages">
+     Section Pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-references-for-formatting">
+   Some references for formatting:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#section-titles-and-referencing">
+     Section Titles and Referencing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linking">
+     Linking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notes">
+     Notes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code">
+     Code
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bullet-points">
+     Bullet points
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#typeface">
+     Typeface
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More information:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="book-tutorial-and-guidelines">
+<h1>Book Tutorial and Guidelines<a class="headerlink" href="#book-tutorial-and-guidelines" title="Permalink to this headline">#</a></h1>
+<p>This page includes information about how to add a section to this Jupyter Book as well as the standards for doing so.</p>
+<section id="how-to-add-a-section">
+<h2>How to add a section:<a class="headerlink" href="#how-to-add-a-section" title="Permalink to this headline">#</a></h2>
+<section id="clone-this-repository">
+<h3>1. Clone this repository<a class="headerlink" href="#clone-this-repository" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:openteamsinc/engineering-team-resource-book.git</span></code></p>
+</section>
+<section id="navigate-to-the-docs-folder">
+<h3>2. Navigate to the docs folder<a class="headerlink" href="#navigate-to-the-docs-folder" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/engineering_team_resource_book/docs</span></code></p>
+</section>
+<section id="create-a-markdown-file">
+<h3>3. Create a markdown file<a class="headerlink" href="#create-a-markdown-file" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">NAME_OF_FILE.md</span></code></p>
+</section>
+<section id="add-contents">
+<h3>4. Add contents<a class="headerlink" href="#add-contents" title="Permalink to this headline">#</a></h3>
+<p>See <a class="reference internal" href="#format"><span class="std std-ref">Formatting Requirements</span></a></p>
+</section>
+<section id="in-the-toc-yml-file-add-markdown-file">
+<h3>5. In the _toc.yml file add markdown file.<a class="headerlink" href="#in-the-toc-yml-file-add-markdown-file" title="Permalink to this headline">#</a></h3>
+<p>A new main page for a project will follow the format below, and be written at the same indentation level as <code class="docutils literal notranslate"><span class="pre">chapters</span></code>.</p>
+<p>A section page under a project should be under the <code class="docutils literal notranslate"><span class="pre">section</span></code> portion which should be under, or should be created under the main or intro project page.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">:</span> <span class="n">jb</span><span class="o">-</span><span class="n">book</span>
+<span class="n">root</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro</span>
+<span class="n">chapters</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">instructions</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro_to_project_page</span>
+  <span class="n">sections</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page1</span>
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page2</span>
+</pre></div>
+</div>
+</section>
+<section id="build-the-book">
+<h3>6. Build the Book<a class="headerlink" href="#build-the-book" title="Permalink to this headline">#</a></h3>
+<p><strong>IMPORTANT</strong> This is the equivalent of saving your work before pushing changes.
+To make sure that everything saves properly, do this after you have added content and added your files to the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p>
+<p>Build with the following command:
+<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">engineering_team_resource_book</span></code></p>
+<p>The general command is:
+<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybookname/</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, Jupyter Book will only build the HTML for pages that have been updated since the last time you built the book.</p>
+<p>If you’d like to force Jupyter Book to re-build a particular page, you can either edit the corresponding file in your book’s folder, or delete that page’s HTML in the _build/html folder.</p>
+<p>You can also signal a full re-build using the –all option:</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">--all</span> <span class="pre">mybookname/</span></code></p>
+</div>
+</section>
+<section id="id1">
+<h3>7.<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ghp-import</span></code></p>
+</section>
+<section id="navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import">
+<h3>8. Navigate to engineering_team_resource_book and push changes using ghp-import<a class="headerlink" href="#navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code>
+This will add the changes you have made to the GitHub Pages for this Jupyter Book which can be found <a class="reference external" href="https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html">here.</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure that you included the -n. This adds a file called .nojekyll to the output of your book, which tells GitHub not to build your book with Jekyll. Which is what we want in order for GitHub Pages to treat your files as a “static HTML website”.</p>
+</div>
+</section>
+</section>
+<section id="formatting-requirements">
+<span id="format"></span><h2>Formatting Requirements:<a class="headerlink" href="#formatting-requirements" title="Permalink to this headline">#</a></h2>
+<section id="project-intro-page">
+<h3>Project intro page<a class="headerlink" href="#project-intro-page" title="Permalink to this headline">#</a></h3>
+<p>This is the page that will be the first layer in the table of contents.</p>
+<p>On this page include a <strong>“#” header</strong> at the top, this will create the title of this page.</p>
+<p>Then include a introductory section. Generally try to avoid adding to many subheaders on this page, add each major section to its own page later on.</p>
+<p>Finally, add the following text:</p>
+<p>This will add all of the section pages added to the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> section below this intro page.
+For example the <code class="docutils literal notranslate"><span class="pre">section_page1</span></code> and <code class="docutils literal notranslate"><span class="pre">section_page2</span></code> Would appear with their “#” Header name in this project’s table of contents.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">:</span> <span class="n">jb</span><span class="o">-</span><span class="n">book</span>
+<span class="n">root</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro</span>
+<span class="n">chapters</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">instructions</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro_to_project</span>
+  <span class="n">sections</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page1</span>
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page2</span>
+</pre></div>
+</div>
+</section>
+<section id="section-pages">
+<h3>Section Pages<a class="headerlink" href="#section-pages" title="Permalink to this headline">#</a></h3>
+<p>Add the bulk of the content into these pages, divided as you see fit.
+Remember to update the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file accordingly.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="p">:</span> <span class="n">jb</span><span class="o">-</span><span class="n">book</span>
+<span class="n">root</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro</span>
+<span class="n">chapters</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">instructions</span>
+<span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">intro_to_project</span>
+  <span class="n">sections</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page1</span>
+  <span class="o">-</span> <span class="n">file</span><span class="p">:</span> <span class="n">docs</span><span class="o">/</span><span class="n">section_page2</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="some-references-for-formatting">
+<h2>Some references for formatting:<a class="headerlink" href="#some-references-for-formatting" title="Permalink to this headline">#</a></h2>
+<section id="section-titles-and-referencing">
+<h3>Section Titles and Referencing<a class="headerlink" href="#section-titles-and-referencing" title="Permalink to this headline">#</a></h3>
+<p>“#” symbols denote section headers in CommonMark markdown. They define the section headers on pages.
+“#” is the main title of the page, and “##” is the first subheader, and so on.</p>
+<p>Here is an example:</p>
+<div class="highlight-# notranslate"><div class="highlight"><pre><span></span>
+This is some sample text.
+
+(section-label)=
+## Here&#39;s my first section
+
+Here is a [reference to the intro](intro.md). Here is a reference to [](section-label).
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>(section-label)= is a label that’s attached to a section header. It refers to whatever header follows, and allows you to refer to this label later on in your text.</p></li>
+</ul>
+</section>
+<section id="linking">
+<h3>Linking<a class="headerlink" href="#linking" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><span class="xref myst">link text</span> syntax is how you specify a link in markdown.</p></li>
+</ul>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h3>
+<p>To create a note use “:::{note}” This is a directive in MyST Markdown. It is rendered like this:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I’m a note!</p>
+</div>
+<p>A similar directive “:::{admonition}SPECIFIC_NAME”</p>
+<div class="highlight-{admonition}SPECIFIC_NAME notranslate"><div class="highlight"><pre><span></span>I’m an admonition!
+</pre></div>
+</div>
+</section>
+<section id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h3>
+<p>“<code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">denotes</span> <span class="pre">a</span> <span class="pre">code</span> <span class="pre">block</span> <span class="pre">in</span> <span class="pre">CommonMark</span> <span class="pre">markdown.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">rendered</span> <span class="pre">like</span> <span class="pre">this:</span> </code>e=mc^2```</p>
+</section>
+<section id="bullet-points">
+<h3>Bullet points<a class="headerlink" href="#bullet-points" title="Permalink to this headline">#</a></h3>
+<p>“- ” Creates a bullet point.</p>
+<ul class="simple">
+<li><p>Which looks like this.</p></li>
+</ul>
+</section>
+<section id="typeface">
+<h3>Typeface<a class="headerlink" href="#typeface" title="Permalink to this headline">#</a></h3>
+<p>“**” on either side of text creates bold face font.
+<strong>Bold text.</strong>
+“*” on either side of text creates italic font.
+<em>Italic font.</em></p>
+</section>
+</section>
+<section id="more-information">
+<h2>More information:<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>
+<p>For more information visit the Jupyter Book website.</p>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/start/new-file.html">Creating a file.</a></p>
+<p><a class="reference external" href="https://commonmark.org/">Markdown explanation.</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Engineering Team Resource Book</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="developer_guidelines.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OpenTeams Engineering Developer Guidelines</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By OpenTeams Engineering Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

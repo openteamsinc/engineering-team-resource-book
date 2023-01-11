@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>OpenTeams Score &#8212; Engineering Team Resource Book</title>
+    <title>Team Culture &#8212; Engineering Team Resource Book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Components of the OpenTeams Score" href="otscore_components.html" />
-    <link rel="prev" title="Appendix" href="appendix.html" />
+    <link rel="next" title="Communication Standards" href="communication_standards.html" />
+    <link rel="prev" title="OpenTeams Engineering Developer Guidelines" href="developer_guidelines.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,18 +119,18 @@ const thebe_selector_output = ".output, .cell_output"
    Book Tutorial and Guidelines
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="developer_guidelines.html">
    OpenTeams Engineering Developer Guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="team_culture.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Team Culture
     </a>
    </li>
@@ -151,11 +151,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="otscore_intro.html">
    OpenTeams Score
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -258,7 +258,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/otscore_intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/team_culture.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -286,7 +286,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/otscore_intro.md"
+        <a href="../_sources/docs/team_culture.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -323,60 +323,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents:
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>OpenTeams Score</h1>
+                <h1>Team Culture</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents:
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -384,22 +347,13 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="openteams-score">
-<h1>OpenTeams Score<a class="headerlink" href="#openteams-score" title="Permalink to this headline">#</a></h1>
-<p>OpenTeams Score is a scoring algorithm that assigns a score to all open source projects we are indexing.  The score is a weighted average of the 6 components defined <span class="xref std std-ref">here</span>. The score is intended to provide a consistent and transparent measure that can potential guide a business user in choosing OSS packages that best fit their project goals.</p>
-<p>V.1 of the project takes into account only 4 of these components as a proof of concept and development will continue as we improve the project in V.2, which we are currently working on. The second version includes the governance and versioning components that the first version does not.</p>
-<div class="admonition-goal admonition">
-<p class="admonition-title">Goal</p>
-<p>Calculating a “OpenTeams score” for a given open source project environment that aims to eventually become an industry standard developed by OpenTeams.</p>
-</div>
-<section id="table-of-contents">
-<h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otscore_components.html">Components of the OpenTeams Score</a></li>
-</ul>
-</div>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="team-culture">
+<h1>Team Culture<a class="headerlink" href="#team-culture" title="Permalink to this headline">#</a></h1>
+<p><em>Nobody wins individually in a team. If your team wins, you win.</em></p>
+<p>We, at OpenTeams Engineering, define team culture as a collection of values, behaviors, beliefs, and working practices that team members share while aiming to fulfill their collective purpose and where each team member feels valued and empowered. As culture grows out of the interactions between individuals, we strive for an inclusive culture where everyone and their ideas are valued and respected. A strong team culture is one where everyone in the team is aligned on purpose, values, behaviors, and working practices while also feeling they are celebrated as individuals.</p>
+<p>Regardless of an individual developer’s prior engineering practices and habits as a developer, the need to agree upon certain guidelines, policies, and practices is necessary to achieve cohesion and clarity in not only daily team practices but also overall team culture. Specific roles and guidelines can streamline processes that might otherwise be disjointed and unclear among members of a diverse subset. Therefore, while the guidelines aim to ensure that the team members are aligned on working practices to maximize our productivity, that all members of the team have autonomy to work in the best way for them so that we are not only more aligned but also empowered to be autonomous and work better both individually and as a team.
+As a team, our goal is to agree to adhere to a particular level of quality not only in our development practices (e.g no linter errors, no failing tests, naming conventions, Git branching model, release cycles, modular structure, software design practices and principles), but also creating and maintaining a strong team culture. In the spirit of this goal, <em>consider this document to be a ‘living document’ which will continuously be improved as we continue to learn and gain more experience in our development and team building skills.</em></p>
+<p>As a team, we expect each member to be a team player, collaborate and communicate well. In our team, we would like to see attention to details, whether it is in the form of clean code, or it is simply writing clearly when messaging on Slack.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,17 +383,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="appendix.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="developer_guidelines.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Appendix</p>
+            <p class="prev-next-title">OpenTeams Engineering Developer Guidelines</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="otscore_components.html" title="next page">
+    <a class='right-next' id="next-link" href="communication_standards.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Components of the OpenTeams Score</p>
+        <p class="prev-next-title">Communication Standards</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

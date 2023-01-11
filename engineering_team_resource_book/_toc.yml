@@ -5,6 +5,13 @@
 format: jb-book
 root: docs/intro
 chapters:
+- file: docs/instructions
+- file: docs/developer_guidelines
+  sections:
+  - file: docs/team_culture
+  - file: docs/communication_standards
+  - file: docs/engineering
+  - file: docs/appendix
 - file: docs/otscore_intro
   sections: 
   - file: docs/otscore_components
