@@ -436,7 +436,8 @@ title="Print to PDF"
 <li><p>Now that we have a notification channel, we can create the alerting policy that uses it. There are two types of alerting policies, metrics and logs based alerting. Mertics based alerting monitors a metric like CPU usage, and sends an alert when it falls outside of whatever range you deem acceptable in the policy.  Logs based alerting sends an alert when a specific type of log/a log containing a specific message appears.</p></li>
 <li><p>We will only cover setting up logs based alerting here, but if you want to set up a metrics-based alerting policy, the instructions to do so are <a class="reference external" href="https://cloud.google.com/monitoring/alerts/using-alerting-ui">here</a>.</p></li>
 <li><p>To set up a logs based alerting policy, go to the <a class="reference external" href="https://console.cloud.google.com/logs?_ga=2.191922154.1135228163.1672770768-27455422.1666893129">Logs Explorer</a>. Here, you can test querying the logs, which is how you build the conditions for your alert. The documentation for building a query is <a class="reference external" href="https://cloud.google.com/logging/docs/view/logging-query-language">here</a>.</p></li>
-<li><p>Once you have a query that gets the log type that you want to be alerted about, you can turn that into an alerting policy by clicking Create alert in the bar above the histogram. Give your policy a descriptive name and documentation (this documentation is what appears as the header to the slack notifications recieve). Next, paste your query into the text box where you define which log entries to alert on.</p></li>
+<li><p>Once you have a query that gets the log type that you want to be alerted about, you can turn that into an alerting policy by clicking Create alert in the bar above the histogram. Give your policy a descriptive name and documentation (this documentation is what appears as the header to the slack notifications recieve).</p></li>
+<li><p>Next, paste your query into the text box where you define which log entries to alert on.</p></li>
 <li><p>Set your notification frequency/autoclose duration as desired, and then for who should be notified select your new Slack channel and your email as a backup.</p></li>
 </ul>
 </section>
@@ -448,7 +449,7 @@ title="Print to PDF"
 </ul>
 <div class="admonition-note admonition">
 <p class="admonition-title">Note</p>
-<p>The minimum time between alerts is 5 minutes, and it’s automatically set to 1 day between alerts, so if you forget to change this or attempt to test a sending a notification less than 5 minutes after one was sent sucessfully, you will not recieve another Slack. This isn’t a bug on your end, it’s just one aspect of the GCP notifications. You can change the alert window by clicking the edit button next to Policy details and chnging the Time Between Notifications.}</p>
+<p>The minimum time between alerts is 5 minutes, and it’s automatically set to 1 day between alerts, so if you forget to change this or attempt to test a sending a notification less than 5 minutes after one was sent sucessfully, you will not recieve another Slack. This isn’t a bug on your end, it’s just one aspect of the GCP notifications. You can change the alert window by clicking the edit button next to Policy details and changing the Time Between Notifications.</p>
 </div>
 </section>
 </section>

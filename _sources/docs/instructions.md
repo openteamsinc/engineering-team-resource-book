@@ -58,11 +58,17 @@ You can also signal a full re-build using the --all option:
 
 ### 8. Navigate to engineering_team_resource_book and push changes using ghp-import
 ```ghp-import -n -p -f _build/html```
-This will add the changes you have made to the GitHub Pages for this Jupyter Book which can be found [here.](https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html)
+This will add the changes you have made to the GitHub Pages for [this Jupyter Book.](https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html) This command will update the ```gh-pages``` branch.
+
+This is the only way that the GitHub Pages can be updated because it is only connected to the ```gh-pages``` branch. Ensure that your local branch is fully updated with the main branch - to avoid overwriting previously made changes - prior to running this command. 
 
 :::{note}
 Make sure that you included the -n. This adds a file called .nojekyll to the output of your book, which tells GitHub not to build your book with Jekyll. Which is what we want in order for GitHub Pages to treat your files as a “static HTML website”.
 :::
+
+### 9. Push changes to main branch.
+Now, update the main branch to have all of the same files as the gh-pages branch. This ensures that your changes will be saved when something new is added to the Jupyter Book.
+
 
 (format)=
 ## Formatting Requirements:
