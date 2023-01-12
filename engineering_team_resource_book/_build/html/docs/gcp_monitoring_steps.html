@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>OpenTeams Score &#8212; Engineering Team Resource Book</title>
+    <title>Setting Up GCP Monitoring &#8212; Engineering Team Resource Book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Components of the OpenTeams Score" href="otscore_components.html" />
-    <link rel="prev" title="Appendix" href="appendix.html" />
+    <link rel="prev" title="Monitoring GCP Slack Alerts" href="gcp_monitoring_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,11 +150,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="otscore_intro.html">
    OpenTeams Score
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -168,18 +167,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="gcp_monitoring_intro.html">
    Monitoring GCP Slack Alerts
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="gcp_monitoring_steps.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Setting Up GCP Monitoring
     </a>
    </li>
@@ -275,7 +274,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/otscore_intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/gcp_monitoring_steps.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -303,7 +302,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/otscore_intro.md"
+        <a href="../_sources/docs/gcp_monitoring_steps.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -363,8 +362,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents:
+  <a class="reference internal nav-link" href="#setting-up-a-notifications-channel">
+   1. Setting Up a Notifications Channel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-alerting-policy">
+   2. Creating an Alerting Policy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-the-alerts">
+   3. Testing the Alerts
   </a>
  </li>
 </ul>
@@ -376,7 +385,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>OpenTeams Score</h1>
+                <h1>Setting Up GCP Monitoring</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -387,8 +396,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents:
+  <a class="reference internal nav-link" href="#setting-up-a-notifications-channel">
+   1. Setting Up a Notifications Channel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-an-alerting-policy">
+   2. Creating an Alerting Policy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-the-alerts">
+   3. Testing the Alerts
   </a>
  </li>
 </ul>
@@ -401,20 +420,35 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="openteams-score">
-<h1>OpenTeams Score<a class="headerlink" href="#openteams-score" title="Permalink to this headline">#</a></h1>
-<p>OpenTeams Score is a scoring algorithm that assigns a score to all open source projects we are indexing.  The score is a weighted average of the 6 components defined <span class="xref std std-ref">here</span>. The score is intended to provide a consistent and transparent measure that can potential guide a business user in choosing OSS packages that best fit their project goals.</p>
-<p>V.1 of the project takes into account only 4 of these components as a proof of concept and development will continue as we improve the project in V.2, which we are currently working on. The second version includes the governance and versioning components that the first version does not.</p>
-<div class="admonition-goal admonition">
-<p class="admonition-title">Goal</p>
-<p>Calculating a “OpenTeams score” for a given open source project environment that aims to eventually become an industry standard developed by OpenTeams.</p>
-</div>
-<section id="table-of-contents">
-<h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="otscore_components.html">Components of the OpenTeams Score</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-gcp-monitoring">
+<h1>Setting Up GCP Monitoring<a class="headerlink" href="#setting-up-gcp-monitoring" title="Permalink to this headline">#</a></h1>
+<section id="setting-up-a-notifications-channel">
+<h2>1. Setting Up a Notifications Channel<a class="headerlink" href="#setting-up-a-notifications-channel" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>In order to be able to set alert conditions, you must first set up a notifications channel for those alerts. Do this by going <a class="reference external" href="https://console.cloud.google.com/monitoring?_ga=2.154211320.1135228163.1672770768-27455422.1666893129">here</a> to monitoring, selecting a project, then clicking Alerting and then EDIT NOTIFICATION CHANNELS.</p></li>
+<li><p>Under Slack, click Add New and allow access to your workspace. Make a channel in the Slack workspace for alerts. If it is a private channel, add the monitoring Slack app to it with <code class="docutils literal notranslate"><span class="pre">/invite</span> <span class="pre">&#64;Google</span> <span class="pre">Cloud</span> <span class="pre">Monitoring</span></code>.</p></li>
+<li><p>Go back to the GCP console and finish setting up the channel by filling in the required description and adding the new Slack channel name. Once this is done, send the test notification to ensure that Slack and GCP have linked correctly and the notifications are appearing in the correct channel. Add an email under the Email section below Slack in the GCP as a backup.</p></li>
 </ul>
+</section>
+<section id="creating-an-alerting-policy">
+<h2>2. Creating an Alerting Policy<a class="headerlink" href="#creating-an-alerting-policy" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Now that we have a notification channel, we can create the alerting policy that uses it. There are two types of alerting policies, metrics and logs based alerting. Mertics based alerting monitors a metric like CPU usage, and sends an alert when it falls outside of whatever range you deem acceptable in the policy.  Logs based alerting sends an alert when a specific type of log/a log containing a specific message appears.</p></li>
+<li><p>We will only cover setting up logs based alerting here, but if you want to set up a metrics-based alerting policy, the instructions to do so are <a class="reference external" href="https://cloud.google.com/monitoring/alerts/using-alerting-ui">here</a>.</p></li>
+<li><p>To set up a logs based alerting policy, go to the <a class="reference external" href="https://console.cloud.google.com/logs?_ga=2.191922154.1135228163.1672770768-27455422.1666893129">Logs Explorer</a>. Here, you can test querying the logs, which is how you build the conditions for your alert. The documentation for building a query is <a class="reference external" href="https://cloud.google.com/logging/docs/view/logging-query-language">here</a>.</p></li>
+<li><p>Once you have a query that gets the log type that you want to be alerted about, you can turn that into an alerting policy by clicking Create alert in the bar above the histogram. Give your policy a descriptive name and documentation (this documentation is what appears as the header to the slack notifications recieve). Next, paste your query into the text box where you define which log entries to alert on.</p></li>
+<li><p>Set your notification frequency/autoclose duration as desired, and then for who should be notified select your new Slack channel and your email as a backup.</p></li>
+</ul>
+</section>
+<section id="testing-the-alerts">
+<h2>3. Testing the Alerts<a class="headerlink" href="#testing-the-alerts" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>To test your policy, create a JSON request body from the example <a class="reference external" href="https://cloud.google.com/logging/docs/alerting/log-based-alerts#lba-test">here</a> that fulfils your alert policy conditions. For example, if I had a policy that alerted when an error log appeared in my project, I would replace the project ID as shown, and change the “severity” field to “ERROR”.  Upload this test log with the Try this method function in the log entries explorer <a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/entries/write">here</a>.</p></li>
+<li><p>This log, if uploaded with the correct conditions, should trigger the Slack being sent. It will also open an ‘incident’ and email you, so even if your Slack integration is not set up correctly, you should be able to see if it worked.</p></li>
+</ul>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>The minimum time between alerts is 5 minutes, and it’s automatically set to 1 day between alerts, so if you forget to change this or attempt to test a sending a notification less than 5 minutes after one was sent sucessfully, you will not recieve another Slack. This isn’t a bug on your end, it’s just one aspect of the GCP notifications. You can change the alert window by clicking the edit button next to Policy details and chnging the Time Between Notifications.}</p>
 </div>
 </section>
 </section>
@@ -446,19 +480,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="appendix.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="gcp_monitoring_intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Appendix</p>
+            <p class="prev-next-title">Monitoring GCP Slack Alerts</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="otscore_components.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Components of the OpenTeams Score</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

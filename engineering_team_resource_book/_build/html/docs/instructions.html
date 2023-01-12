@@ -168,6 +168,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="gcp_monitoring_intro.html">
+   Monitoring GCP Slack Alerts
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gcp_monitoring_steps.html">
+     Setting Up GCP Monitoring
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -390,6 +407,11 @@ title="Print to PDF"
      8. Navigate to engineering_team_resource_book and push changes using ghp-import
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#push-changes-to-main-branch">
+     9. Push changes to main branch.
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -513,6 +535,11 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import">
      8. Navigate to engineering_team_resource_book and push changes using ghp-import
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#push-changes-to-main-branch">
+     9. Push changes to main branch.
     </a>
    </li>
   </ul>
@@ -645,11 +672,16 @@ To make sure that everything saves properly, do this after you have added conten
 <section id="navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import">
 <h3>8. Navigate to engineering_team_resource_book and push changes using ghp-import<a class="headerlink" href="#navigate-to-engineering-team-resource-book-and-push-changes-using-ghp-import" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code>
-This will add the changes you have made to the GitHub Pages for this Jupyter Book which can be found <a class="reference external" href="https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html">here.</a></p>
+This will add the changes you have made to the GitHub Pages for <a class="reference external" href="https://openteamsinc.github.io/engineering-team-resource-book/docs/intro.html">this Jupyter Book.</a> This command will update the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
+<p>This is the only way that the GitHub Pages can be updated because it is only connected to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch. Ensure that your local branch is fully updated with the main branch - to avoid overwriting previously made changes - prior to running this command.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure that you included the -n. This adds a file called .nojekyll to the output of your book, which tells GitHub not to build your book with Jekyll. Which is what we want in order for GitHub Pages to treat your files as a “static HTML website”.</p>
 </div>
+</section>
+<section id="push-changes-to-main-branch">
+<h3>9. Push changes to main branch.<a class="headerlink" href="#push-changes-to-main-branch" title="Permalink to this headline">#</a></h3>
+<p>Now, update the main branch to have all of the same files as the gh-pages branch. This ensures that your changes will be saved when something new is added to the Jupyter Book.</p>
 </section>
 </section>
 <section id="formatting-requirements">

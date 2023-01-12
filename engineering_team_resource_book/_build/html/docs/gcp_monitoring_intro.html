@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>OpenTeams Score &#8212; Engineering Team Resource Book</title>
+    <title>Monitoring GCP Slack Alerts &#8212; Engineering Team Resource Book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Components of the OpenTeams Score" href="otscore_components.html" />
-    <link rel="prev" title="Appendix" href="appendix.html" />
+    <link rel="next" title="Setting Up GCP Monitoring" href="gcp_monitoring_steps.html" />
+    <link rel="prev" title="Components of the OpenTeams Score" href="otscore_components.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,11 +151,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="otscore_intro.html">
    OpenTeams Score
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -168,11 +168,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="gcp_monitoring_intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Monitoring GCP Slack Alerts
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
@@ -275,7 +275,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/otscore_intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/gcp_monitoring_intro.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -303,7 +303,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/docs/otscore_intro.md"
+        <a href="../_sources/docs/gcp_monitoring_intro.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -376,7 +376,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>OpenTeams Score</h1>
+                <h1>Monitoring GCP Slack Alerts</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -401,19 +401,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="openteams-score">
-<h1>OpenTeams Score<a class="headerlink" href="#openteams-score" title="Permalink to this headline">#</a></h1>
-<p>OpenTeams Score is a scoring algorithm that assigns a score to all open source projects we are indexing.  The score is a weighted average of the 6 components defined <span class="xref std std-ref">here</span>. The score is intended to provide a consistent and transparent measure that can potential guide a business user in choosing OSS packages that best fit their project goals.</p>
-<p>V.1 of the project takes into account only 4 of these components as a proof of concept and development will continue as we improve the project in V.2, which we are currently working on. The second version includes the governance and versioning components that the first version does not.</p>
-<div class="admonition-goal admonition">
-<p class="admonition-title">Goal</p>
-<p>Calculating a “OpenTeams score” for a given open source project environment that aims to eventually become an industry standard developed by OpenTeams.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="monitoring-gcp-slack-alerts">
+<h1>Monitoring GCP Slack Alerts<a class="headerlink" href="#monitoring-gcp-slack-alerts" title="Permalink to this headline">#</a></h1>
+<p>GCP has a built in monitoring service for projects deployed on GCP.  This section describes the process of setting up these alerts to link with Slack and email and message a private channel when a specific condition is met. For this, you need to be an admin or owner of the Slack workspace that you want to be notified in, and you need to have one of the following roles in the project you wish to set up alerts for: Monitoring Notification, Channel Editor, Monitoring Editor, Monitoring Admin, Project Editor, or Project Owner. You can check your role by going to the welcome page for the project, clicking IAM &amp; Admin below and then looking in the permissions table for your email and role.</p>
 <section id="table-of-contents">
 <h2>Table of Contents:<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="otscore_components.html">Components of the OpenTeams Score</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gcp_monitoring_steps.html">Setting Up GCP Monitoring</a></li>
 </ul>
 </div>
 </section>
@@ -446,17 +441,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="appendix.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="otscore_components.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Appendix</p>
+            <p class="prev-next-title">Components of the OpenTeams Score</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="otscore_components.html" title="next page">
+    <a class='right-next' id="next-link" href="gcp_monitoring_steps.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Components of the OpenTeams Score</p>
+        <p class="prev-next-title">Setting Up GCP Monitoring</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
