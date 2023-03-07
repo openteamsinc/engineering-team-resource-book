@@ -1,0 +1,8 @@
+# Installing with `pip` and `conda`
+
+`conda` environments are used to separate dependencies and versions of packages when working on different projects. Packages can often be installed using either `pip` or `conda`. There are a few basic considerations to keep in mind when installing a `python` package with either of these package managers.
+
+- If possible, install the package with `conda`. `conda` keeps track of version compatibility between versions of different packages. Though there is a longer latency with `conda`, conda will install the package that is compatible with the rest of your dependencies.
+- A lot of times a package won't be available with `conda` and so using `pip` will be required. This will be the case with all of the GitHub repositories that the team writes. To install one the team packages, navigate into the directory and run `pip install .`.
+- When adding dependencies to a project, add the name and version of the package to the `environment.yml` file. Use `conda` when possible and use `pip` in all other cases.
+- Do not run `pip` as the root user and do not run `pip` with the `sudo` command. Installing with `pip` in either of these cases will result in the warning: `WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv`. Running `pip` like this may break paths and permissions in a significant way. Take care when using `pip`.
